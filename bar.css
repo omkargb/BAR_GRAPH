@@ -1,0 +1,81 @@
+
+body {
+  background: #fff;
+  font-family: noto sans;
+}
+#chart {
+  width: 650px;
+  height: 300px;
+  margin: 30px auto 0;
+  display: block;
+}
+#chart #numbers {
+  width: 50px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  float: left;
+}
+#chart #numbers li {
+  text-align: right;
+  padding-right: 1em;
+  list-style: none;
+  height: 30px;
+  border-bottom: 1px solid #999;
+  position: relative;
+  bottom: 29px;
+}
+#chart #numbers li:last-child {
+  height: 30px;
+}
+#chart #numbers li span {
+  color: #999;
+  position: absolute;
+  bottom:-0.2em;
+  right: 10px;
+}
+#chart #bars {
+  display: inline-block;
+  background: ghostwhite;
+  width: 600px;
+  height: 300px;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 0 0 1px black;
+}
+#chart #bars li {
+  display: table-cell;
+  width: 80px;
+  height: 300px;
+  margin: 0;
+  text-align: center;
+  position: relative;
+}
+#chart #bars li .bar {
+  display: block;
+  width: 40px;
+  margin-left: 20px;
+  background:linear-gradient(150deg, #172077, #21a9af);
+  position: absolute;
+  bottom: 0;
+}
+#chart #bars li .bar:hover {
+  background: #102090;
+  cursor: pointer;
+}
+#chart #bars li .bar:hover:before {
+  color: #090;
+  content: attr(data-percentage) '%';
+  position: relative;
+  bottom: 1.2em;
+  font-weight:1000;
+}
+#chart #bars li span {
+  color: #001;
+  width: 100%;
+  position: absolute;
+  bottom: -1.5em;
+  left: 0;
+  text-align: center;
+}

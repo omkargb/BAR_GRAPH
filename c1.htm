@@ -1,0 +1,61 @@
+﻿
+<html lang="en" >
+
+<head>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="bar.css">
+  <meta charset="UTF-8">
+  <title>bar chart</title>
+
+
+  
+</head>
+
+<body translate="no" >
+
+  <div id="chart">
+  <ul id="numbers">
+    <li><span>100%</span></li>
+    <li><span>90%</span></li>
+    <li><span>80%</span></li>
+    <li><span>70%</span></li>
+    <li><span>60%</span></li>
+    <li><span>50%</span></li>
+    <li><span>40%</span></li>
+    <li><span>30%</span></li>
+    <li><span>20%</span></li>
+    <li><span>10%</span></li>
+    <li><span>0%</span></li>
+  </ul>
+  
+  <ul id="bars">
+    <li><div data-percentage="60" class="bar"></div><span>Option 1</span></li>
+    <li><div data-percentage="35" class="bar"></div><span>Option 2</span></li>
+    <li><div data-percentage="50" class="bar"></div><span>Option 3</span></li>
+    <li><div data-percentage="95" class="bar"></div><span>Option 4</span></li>
+    <li><div data-percentage="45" class="bar"></div><span>Option 5</span></li>
+    <li><div data-percentage="25" class="bar"></div><span>Option 6</span>
+    </li>
+  </ul>
+</div>
+  <script src="jquery.min.js"></script>
+
+  
+
+    <script >
+      $(function() {
+  $("#bars li .bar").each( function( key, bar ) {
+    var percentage = $(this).data('percentage');
+    
+    $(this).animate({
+      'height' : percentage + '%'
+    }, 1000);
+  });
+});
+    </script>
+
+
+</body>
+
+</html>
+ 
